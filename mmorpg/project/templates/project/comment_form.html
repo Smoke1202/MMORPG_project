@@ -1,0 +1,13 @@
+{% extends "project/base.html" %}
+{% block content %}
+    <div class="row justify-content-md-center">
+        <form  method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+                <legend class="border-top mb-4">Add Comment</legend>
+                {{ user.username }}
+                {{ form.as_p }}
+                <button class="btn btn-outline-info" type="submit">Submit</button>
+
+        </form>
+    </div>
+{% endblock content %}
